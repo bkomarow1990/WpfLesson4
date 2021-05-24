@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfLesson4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLesson4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" Name="toolbar1">
+            <Button FontStyle="Italic"  Content="Italic" Name="ItalicBtn" Click="ItalicBtn_Click"/>
+            <Button Name="UnderlineBtn" Click="UnderlineBtn_Click" >
+                <Underline>Underline</Underline>
+            </Button>
+            <Button  Content="Bold" FontWeight="Bold" Name="BoldBtn" Click="BoldBtn_Click"/>
+            <Button  Content="Clear" Name="CLearBtn" Click="CLearBtn_Click"/>
+            <Separator/>
+            <TextBlock>Font Size:</TextBlock>
+            <ComboBox Name="ComboBoxSizes" IsEditable="True" IsReadOnly="False" SelectionChanged="ComboBoxSizes_SelectionChanged">
+            
+            </ComboBox>
+            <Separator/>
+            <TextBlock>Color:</TextBlock>
+            <ComboBox Name="ComboBoxColors" IsReadOnly="True">
+                
+                <ComboBoxItem x:Name="dockPanelColors">
+                    <StackPanel Orientation="Vertical">
+                       
+                        <TextBlock Background="Red"></TextBlock>
+                        <TextBlock Text="Red"></TextBlock>
+                        <Separator></Separator>
+                        <TextBlock Background="White"></TextBlock>
+                        <TextBlock Text="White"></TextBlock>
+                        <Separator></Separator>
+                        <TextBlock Background="Black"></TextBlock>
+                        <TextBlock Text="Black"></TextBlock>
+                        <Separator></Separator>
+                        <TextBlock Background="Blue"></TextBlock>
+                        <TextBlock Text="Blue"></TextBlock>
+                        <Separator></Separator>
+                        <TextBlock Background="Yellow"></TextBlock>
+                        <TextBlock Text="Yellow"></TextBlock>
+                        <Separator></Separator>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <Separator></Separator>
+        </ToolBar>
+        <ToolBar >
+            <TextBlock> </TextBlock>
+        </ToolBar>
+        <RichTextBox x:Name="DocRichTextBox">
+           
+        </RichTextBox>
+
+    </DockPanel>
+</Window>
